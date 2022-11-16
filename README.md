@@ -1,2 +1,2 @@
-# password-generator
+# Password Generator
 Simple password generator
