@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" media="screen" href="css/normalize.css">
+<link rel="stylesheet" media="screen" href="css/reset.css">
+<link rel="stylesheet" media="screen" href="css/typography.css">
+<link rel="stylesheet" media="screen" href="css/style.css">
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<main>
+	<h1>Password Generator</h1>
+
+	<div id="password-generator">
+		<input type="text" class="password">
+		<div class="password-formatted"></div>
+		<div class="range-controls">
+			<label>Length</label>
+			<input type="range" min="12" max="50" value="16" class="range-slider">
+			<input type="text" class="length" value="16">
+		</div>
+		<div class="buttons">
+			<button type="button" class="copy" onclick="copyPassword()">Copy</button>
+			<button type="button" class="generate" onclick="createPassword()">Generate</button>
+		</div>
+	</div>
+</main>
+
+<!-- SCRIPTS -->
+<script src="js/custom.js"></script>
+
+</body>
+</html>

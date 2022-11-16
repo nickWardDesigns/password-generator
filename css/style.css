@@ -1,0 +1,193 @@
+/* Variables */
+:root {
+	--color-main: 351, 77%, 82%;
+	--color-muted: 135, 10%, 92%;
+}
+
+
+/* Structure
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #d8e2dc;
+}
+
+main {
+	width: 35rem;
+	max-width: 100%;
+	padding: 1.5rem;
+}
+
+
+/* Password Generator
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#password-generator {
+	padding: 2rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	box-shadow: 0 0 3rem rgb(119 128 122 / 20%);
+}
+
+.password,
+.password-formatted {
+	width: 100%;
+	padding-bottom: .5rem;
+	margin-bottom: 2rem;
+	border-bottom: 3px solid hsl(var(--color-main));
+	font-family: 'Fira Code', monospace;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.password {
+	display: none;
+}
+
+.password-formatted {
+	overflow: auto;
+}
+
+	.password-formatted span {
+		color: #ce7683;
+	}
+
+.range-controls {
+	display: grid;
+	grid-template-columns: 60px 1fr 60px;
+	gap: 1rem;
+}
+
+	.range-controls .length {
+		text-align: center;
+	}
+
+.buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: .5rem;
+	margin-top: 1.5rem;
+}
+
+button {
+	--bg: var(--color-main);
+	padding: 1rem;
+	background-color: hsl(var(--bg));
+	border-radius: .75rem;
+	text-align: center;
+	font-weight: bold;
+	color: #352729;
+	cursor: pointer;
+	transition: .2s ease all;
+}
+
+.copy {
+	--bg: var(--color-muted);
+}
+
+button:hover {
+	background-color: hsl(var(--bg), .75);
+}
+
+
+/* Range slider
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type=range] {
+	width: 100%;
+	margin: 6px 0;
+	background-color: transparent;
+	-webkit-appearance: none;
+  }
+  
+input[type=range]:focus {
+	outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 8px;
+	background: rgba(0, 0, 0, 0.1);
+	border: 0.1px solid rgba(1, 1, 1, 0);
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	width: 20px;
+	height: 20px;
+	margin-top: -6.1px;
+	background: #f4aeb8;
+	border: 1.8px solid rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 8px;
+	background: rgba(0, 0, 0, 0.1);
+	border: 0.1px solid rgba(1, 1, 1, 0);
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+	width: 20px;
+	height: 20px;
+	background: #f4aeb8;
+	border: 1.8px solid rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 8px;
+	background: transparent;
+	border-color: transparent;
+	border-width: 6.9px 0;
+	color: transparent;
+	cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+	background: #000000;
+	border: 0.1px solid rgba(1, 1, 1, 0);
+	border-radius: 50px;
+}
+
+input[type=range]::-ms-fill-upper {
+	background: rgba(0, 0, 0, 0.1);
+	border: 0.1px solid rgba(1, 1, 1, 0);
+	border-radius: 50px;
+}
+
+input[type=range]::-ms-thumb {
+	width: 20px;
+	height: 20px;
+	margin-top: 0px;
+	background: #f4aeb8;
+	border: 1.8px solid rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+input[type=range]:focus::-ms-fill-upper {
+	background: #ccc;
+}
+
+@supports (-ms-ime-align:auto) {
+	input[type=range] {
+		margin: 0;
+	}
+}
