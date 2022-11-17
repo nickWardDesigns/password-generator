@@ -47,6 +47,7 @@ main {
 
 .password-formatted {
 	overflow: auto;
+	white-space: nowrap;
 }
 
 	.password-formatted span {
