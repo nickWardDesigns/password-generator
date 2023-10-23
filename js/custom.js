@@ -4,7 +4,7 @@ function createPassword(length = 16) {
 	const lettersLower = 'abcdefghijklmnopqrstuvwxyz';
 	const lettersUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	const numbers = '0123456789';
-	const symbols = '`~!@#$%^&*()-_+={[]}|:;<>,.?/';
+	const symbols = '`~!@#$%^&*()-_+={[]}:;<>,.?/';
 	let chars = lettersLower.concat(numbers, symbols, lettersUpper);
 	const input = document.querySelector('.password');
 	const inputFormatted = document.querySelector('.password-formatted');
